@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4BDC434720C1A147001C9241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC434620C1A147001C9241 /* AppDelegate.swift */; };
-		4BDC434920C1A147001C9241 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC434820C1A147001C9241 /* ViewController.swift */; };
 		4BDC434C20C1A147001C9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDC434A20C1A147001C9241 /* Main.storyboard */; };
 		4BDC434E20C1A148001C9241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDC434D20C1A148001C9241 /* Assets.xcassets */; };
 		4BDC435120C1A148001C9241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDC434F20C1A148001C9241 /* LaunchScreen.storyboard */; };
 		4BDC435C20C1A148001C9241 /* MyMobilesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC435B20C1A148001C9241 /* MyMobilesTests.swift */; };
 		4BDC436720C1A148001C9241 /* MyMobilesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC436620C1A148001C9241 /* MyMobilesUITests.swift */; };
+		4BDC437620C1A37F001C9241 /* AddMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */; };
+		4BDC437820C1A390001C9241 /* MobileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC437720C1A390001C9241 /* MobileListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		4BDC434320C1A147001C9241 /* MyMobiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMobiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDC434620C1A147001C9241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BDC434820C1A147001C9241 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BDC434B20C1A147001C9241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BDC434D20C1A148001C9241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BDC435020C1A148001C9241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		4BDC436220C1A148001C9241 /* MyMobilesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMobilesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDC436620C1A148001C9241 /* MyMobilesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMobilesUITests.swift; sourceTree = "<group>"; };
 		4BDC436820C1A148001C9241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMobileViewController.swift; sourceTree = "<group>"; };
+		4BDC437720C1A390001C9241 /* MobileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				4BDC434620C1A147001C9241 /* AppDelegate.swift */,
-				4BDC434820C1A147001C9241 /* ViewController.swift */,
 				4BDC434A20C1A147001C9241 /* Main.storyboard */,
+				4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */,
+				4BDC437720C1A390001C9241 /* MobileListViewController.swift */,
 				4BDC437420C1A178001C9241 /* External */,
 			);
 			path = MyMobiles;
@@ -264,8 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BDC434920C1A147001C9241 /* ViewController.swift in Sources */,
+				4BDC437620C1A37F001C9241 /* AddMobileViewController.swift in Sources */,
 				4BDC434720C1A147001C9241 /* AppDelegate.swift in Sources */,
+				4BDC437820C1A390001C9241 /* MobileListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,14 +442,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MyMobiles/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/MyMobiles/External/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kashif.MyMobiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,14 +461,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MyMobiles/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/MyMobiles/External/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kashif.MyMobiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
