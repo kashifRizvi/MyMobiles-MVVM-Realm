@@ -16,6 +16,7 @@
 		4BDC437620C1A37F001C9241 /* AddMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */; };
 		4BDC437820C1A390001C9241 /* MobileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC437720C1A390001C9241 /* MobileListViewController.swift */; };
 		4BDC438A20C1CC1C001C9241 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC438920C1CC1C001C9241 /* Mobile.swift */; };
+		4BDC438F20C1CDF6001C9241 /* MobileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC438E20C1CDF6001C9241 /* MobileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMobileViewController.swift; sourceTree = "<group>"; };
 		4BDC437720C1A390001C9241 /* MobileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewController.swift; sourceTree = "<group>"; };
 		4BDC438920C1CC1C001C9241 /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
+		4BDC438E20C1CDF6001C9241 /* MobileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				4BDC438820C1CC04001C9241 /* Model */,
+				4BDC438C20C1CDD0001C9241 /* ViewModel */,
 				4BDC434620C1A147001C9241 /* AppDelegate.swift */,
 				4BDC434A20C1A147001C9241 /* Main.storyboard */,
 				4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */,
@@ -145,6 +148,14 @@
 				4BDC438920C1CC1C001C9241 /* Mobile.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4BDC438C20C1CDD0001C9241 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC438E20C1CDF6001C9241 /* MobileViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 			files = (
 				4BDC437620C1A37F001C9241 /* AddMobileViewController.swift in Sources */,
 				4BDC434720C1A147001C9241 /* AppDelegate.swift in Sources */,
+				4BDC438F20C1CDF6001C9241 /* MobileViewModel.swift in Sources */,
 				4BDC437820C1A390001C9241 /* MobileListViewController.swift in Sources */,
 				4BDC438A20C1CC1C001C9241 /* Mobile.swift in Sources */,
 			);

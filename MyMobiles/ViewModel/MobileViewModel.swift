@@ -1,5 +1,5 @@
 //
-//  Mobile.swift
+//  MobileViewModel.swift
 //  MyMobiles
 //
 //  Created by Kashif Rizvi on 02/06/18.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Mobile {
+class MobileViewModel {
+    
     var name: String
     var model: String
     var cost: Int
@@ -18,15 +19,15 @@ class Mobile {
     var secondaryCamera: String
     var memory: String
     
-    init(mobileViewModel: MobileViewModel) {
-        self.name = mobileViewModel.name
-        self.cost = mobileViewModel.cost
-        self.model = mobileViewModel.model
-        self.color = mobileViewModel.color
-        self.battery = mobileViewModel.battery
-        self.primaryCamera = mobileViewModel.primaryCamera
-        self.secondaryCamera = mobileViewModel.secondaryCamera
-        self.memory = mobileViewModel.memory
+    init(mobile: Mobile) {
+        self.name = mobile.name
+        self.cost = mobile.cost
+        self.model = mobile.model
+        self.color = mobile.color
+        self.battery = mobile.battery
+        self.primaryCamera = mobile.primaryCamera
+        self.secondaryCamera = mobile.secondaryCamera
+        self.memory = mobile.memory
     }
     
     init(name: String, model: String, cost: Int, color: String, battery: Int, primaryCamera: String, secondaryCamera: String, memory: String) {
