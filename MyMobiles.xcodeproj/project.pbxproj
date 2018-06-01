@@ -100,9 +100,7 @@
 				4BDC434620C1A147001C9241 /* AppDelegate.swift */,
 				4BDC434820C1A147001C9241 /* ViewController.swift */,
 				4BDC434A20C1A147001C9241 /* Main.storyboard */,
-				4BDC434D20C1A148001C9241 /* Assets.xcassets */,
-				4BDC434F20C1A148001C9241 /* LaunchScreen.storyboard */,
-				4BDC435220C1A148001C9241 /* Info.plist */,
+				4BDC437420C1A178001C9241 /* External */,
 			);
 			path = MyMobiles;
 			sourceTree = "<group>";
@@ -123,6 +121,16 @@
 				4BDC436820C1A148001C9241 /* Info.plist */,
 			);
 			path = MyMobilesUITests;
+			sourceTree = "<group>";
+		};
+		4BDC437420C1A178001C9241 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC434D20C1A148001C9241 /* Assets.xcassets */,
+				4BDC434F20C1A148001C9241 /* LaunchScreen.storyboard */,
+				4BDC435220C1A148001C9241 /* Info.plist */,
+			);
+			path = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
