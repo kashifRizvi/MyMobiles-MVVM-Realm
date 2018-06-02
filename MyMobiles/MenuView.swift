@@ -10,7 +10,7 @@ import UIKit
 
 class MenuView: UIView {
 
-    var toOpen: Bool = false {
+    var shouldShow: Bool = false {
         didSet {
             animateView()
         }
@@ -45,7 +45,7 @@ class MenuView: UIView {
     
     private func animateView() {
         layoutIfNeeded()
-        if toOpen {
+        if shouldShow {
             UIView.animate(withDuration: 1.4) {
                 self.frame.origin.y = 0
             }

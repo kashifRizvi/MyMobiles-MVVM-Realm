@@ -8,7 +8,12 @@
 
 import UIKit
 
-class MobileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol RowUpdateDelegate {
+    func reloadCellFor(cell: UITableViewCell)
+}
+
+class MobileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RowUpdateDelegate {
+    
 
     private var mobileListViewModel: MobileListViewModel!
     
@@ -24,14 +29,13 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
         mobileListViewModel = MobileListViewModel() {
             self.mobileListTableView.reloadData()
         }
-        
+        mobileListTableView.rowHeight = UITableViewAutomaticDimension
         mobileListTableView.delegate = self
         mobileListTableView.dataSource = self
         
         menuView = MenuView()
         view.addSubview(menuView)
     }
-    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,12 +56,26 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.nameModelLabel.text = String("\(mobileDetailViewModel.name), \(mobileDetailViewModel.model)")
         cell.primaryCameraLabel.text = mobileDetailViewModel.primaryCamera
         cell.secondaryCameraLabel.text = mobileDetailViewModel.secondaryCamera
+        cell.delegate = self
+        cell.tag = indexPath.row
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        print("Selected Row at index path, Section: \(indexPath.section) , Row: \(indexPath.row)")
+        tableView.reloadRows(at: [IndexPath(row: indexPath.row + 1, section: indexPath.section)], with: .automatic)
+    }
+    
     @IBAction func menuTapped(_ sender: UIButton) {
-        menuView.toOpen = !menuView.toOpen
+        menuView.shouldShow = !menuView.shouldShow
+    }
+    
+    func reloadCellFor(cell: UITableViewCell) {
+        if let indexPath = mobileListTableView.indexPath(for: cell) {
+            mobileListTableView.reloadRows(at: [indexPath], with: .automatic)
+        }
     }
     
     override func didReceiveMemoryWarning() {

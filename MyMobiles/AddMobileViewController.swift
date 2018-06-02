@@ -42,7 +42,7 @@ class AddMobileViewController: UIViewController {
     }
     
     @IBAction func menuTapped(_ sender: UIButton) {
-        menuView.toOpen = !menuView.toOpen
+        menuView.shouldShow = !menuView.shouldShow
         
     }
     

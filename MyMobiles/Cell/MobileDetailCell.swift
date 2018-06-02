@@ -9,11 +9,6 @@
 import UIKit
 
 class MobileDetailCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     @IBOutlet weak var nameModelLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
@@ -22,11 +17,30 @@ class MobileDetailCell: UITableViewCell {
     @IBOutlet weak var secondaryCameraLabel: UILabel!
     @IBOutlet weak var batteryLabel: UILabel!
     @IBOutlet weak var memoryLabel: UILabel!
+    @IBOutlet weak var otherFeatureView: UIStackView!
+    private var otherFeatureShown: Bool = false {
+        didSet {
+            otherFeatureView.isHidden = !otherFeatureShown
+            delegate.reloadCellFor(cell: self)
+        }
+    }
+    var delegate: RowUpdateDelegate!
+    @IBOutlet weak var moreButton: UIButton!
     
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+    @IBAction func moreButtonTapped(_ sender: UIButton) {
+        if otherFeatureShown {
+            moreButton.setTitle("more", for: .normal)
+        }
+        else {
+            moreButton.setTitle("less", for: .normal)
+        }
+        otherFeatureShown = !otherFeatureShown
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        otherFeatureView.isHidden = true
+        moreButton.setTitle("more", for: .normal)
     }
 
 }

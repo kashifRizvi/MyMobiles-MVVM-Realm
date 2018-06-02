@@ -13,20 +13,15 @@ class MobileListViewModel {
     
     private (set) var mobileDetailViewModels :[MobileDetailViewModel] = [MobileDetailViewModel]()
     
-    
-    private var realm: Realm!
-    
     init(completion :@escaping () -> ()) {
-        
-        realm = try! Realm()
-        fetchData()
+            fetchData()
             DispatchQueue.main.async {
                 completion()
             }
         }
     
     private func fetchData() {
-        mobileDetailViewModels = realm.objects(Mobile.self).map(MobileDetailViewModel.init)
+        mobileDetailViewModels = DataService().fetchMobiles().map(MobileDetailViewModel.init)
     }
     
     func mobileAt(index: Int) -> MobileDetailViewModel {
