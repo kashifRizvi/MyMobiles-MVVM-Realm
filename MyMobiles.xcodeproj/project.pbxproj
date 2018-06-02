@@ -13,6 +13,7 @@
 		4BB5612C20C2A6AC00ED2B2E /* MobileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612B20C2A6AC00ED2B2E /* MobileDetailViewModel.swift */; };
 		4BB5612E20C2ADC100ED2B2E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612D20C2ADC100ED2B2E /* MenuView.swift */; };
 		4BB5613020C2ADE900ED2B2E /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BB5612F20C2ADE900ED2B2E /* MenuView.xib */; };
+		4BB5614220C2D16300ED2B2E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5614120C2D16300ED2B2E /* DataService.swift */; };
 		4BDC434720C1A147001C9241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC434620C1A147001C9241 /* AppDelegate.swift */; };
 		4BDC434C20C1A147001C9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDC434A20C1A147001C9241 /* Main.storyboard */; };
 		4BDC434E20C1A148001C9241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDC434D20C1A148001C9241 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		4BB5612B20C2A6AC00ED2B2E /* MobileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewModel.swift; sourceTree = "<group>"; };
 		4BB5612D20C2ADC100ED2B2E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		4BB5612F20C2ADE900ED2B2E /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		4BB5614120C2D16300ED2B2E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4BDC434320C1A147001C9241 /* MyMobiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMobiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDC434620C1A147001C9241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDC434B20C1A147001C9241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		4BB5614020C2D13F00ED2B2E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4BB5614120C2D16300ED2B2E /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		4BDC433A20C1A147001C9241 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		4BDC434520C1A147001C9241 /* MyMobiles */ = {
 			isa = PBXGroup;
 			children = (
+				4BB5614020C2D13F00ED2B2E /* Services */,
 				4BB5612420C281AA00ED2B2E /* Cell */,
 				4BDC438820C1CC04001C9241 /* Model */,
 				4BDC438C20C1CDD0001C9241 /* ViewModel */,
@@ -431,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB5614220C2D16300ED2B2E /* DataService.swift in Sources */,
 				4BB5612C20C2A6AC00ED2B2E /* MobileDetailViewModel.swift in Sources */,
 				4BB5612E20C2ADC100ED2B2E /* MenuView.swift in Sources */,
 				4BB5612A20C2833D00ED2B2E /* MobileListViewModel.swift in Sources */,
