@@ -18,6 +18,7 @@ class Mobile: Object {
     @objc dynamic var primaryCamera: String = ""
     @objc dynamic var secondaryCamera: String = ""
     @objc dynamic var memory: String = ""
+    @objc dynamic var date: Date = Date()
     
     convenience init(mobileViewModel: MobileDetailViewModel) {
         self.init()

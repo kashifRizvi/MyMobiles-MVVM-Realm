@@ -68,8 +68,11 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            mobileListViewModel.deleteMobile(index: indexPath.row)
+            tableView.reloadData()
+        }
     }
     
     @IBAction func menuTapped(_ sender: UIButton) {

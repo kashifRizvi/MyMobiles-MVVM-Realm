@@ -23,9 +23,7 @@ class MobileDetailViewModel {
     var showOtherFeatures: Bool = false
     
     var delegate: DataServiceDelegate?
-    
-    var realm: Realm!
-    
+        
     init(mobile: Mobile) {
         self.name = mobile.name
         self.cost = mobile.cost
@@ -50,11 +48,7 @@ class MobileDetailViewModel {
     }
     
     private func saveMobile() {
-        realm = try! Realm()
-        try! realm.write {
-            realm.add(Mobile.init(mobileViewModel: self))
-            print("Write object with name: \(name)")
-        }
+        DataService().saveMobile(object: Mobile.init(mobileViewModel: self))
     }
     
 }

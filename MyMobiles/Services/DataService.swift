@@ -18,10 +18,18 @@ class DataService {
     }
     
     func fetchMobiles() -> Results<Mobile> {
-        return realm.objects(Mobile.self)
+        return realm.objects(Mobile.self).sorted(byKeyPath: "date", ascending: true)
     }
     
-    func writeObjects(completion: () -> ()) {
-        
+    func saveMobile(object: Mobile) {
+        try! realm.write {
+            realm.add(object)
+        }
+    }
+    
+    func deleteObject(with name: String) {
+        try! realm.write {
+            realm.delete(realm.objects(Mobile.self).filter("name == %@", name))
+        }
     }
 }

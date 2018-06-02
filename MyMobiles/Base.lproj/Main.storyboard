@@ -38,7 +38,7 @@
                                     <constraint firstAttribute="trailing" secondItem="5Rp-V2-xTM" secondAttribute="trailing" constant="30" id="uv4-i1-Jjv"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rwr-NO-e2r">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rwr-NO-e2r">
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -296,7 +296,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mobiles" id="QM9-yf-rAB"/>
+                    <tabBarItem key="tabBarItem" title="Mobiles" image="mobileListUnselected" selectedImage="mobileListUnselected" id="QM9-yf-rAB"/>
                     <connections>
                         <outlet property="menuButton" destination="5Rp-V2-xTM" id="0uy-s1-iDx"/>
                         <outlet property="mobileListTableView" destination="Rwr-NO-e2r" id="Ase-GK-PYR"/>
@@ -611,7 +611,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0qQ-p9-2yp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Mobile" id="r5t-wn-Fi7"/>
+                    <tabBarItem key="tabBarItem" title="Add Mobile" image="addMobileUnselected" selectedImage="addMobileUnselected" id="r5t-wn-Fi7"/>
                     <connections>
                         <outlet property="batteryLabel" destination="Jzd-vR-Sop" id="WSl-Q2-CwE"/>
                         <outlet property="batteryTextField" destination="RIh-HE-1bi" id="gyj-S2-1Dp"/>
@@ -636,4 +636,8 @@
             <point key="canvasLocation" x="1018" y="-178"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addMobileUnselected" width="30" height="30"/>
+        <image name="mobileListUnselected" width="30" height="30"/>
+    </resources>
 </document>

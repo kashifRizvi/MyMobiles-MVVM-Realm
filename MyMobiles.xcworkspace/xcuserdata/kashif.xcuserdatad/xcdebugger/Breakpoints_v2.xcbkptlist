@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyMobiles/AddMobileViewController.swift"
-            timestampString = "549639607.273844"
+            filePath = "MyMobiles/Services/DataService.swift"
+            timestampString = "549671880.412396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "saveTapped(_:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "fetchMobiles()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,41 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyMobiles/ViewModel/MobileDetailViewModel.swift"
-            timestampString = "549639607.273988"
+            filePath = "MyMobiles/Services/DataService.swift"
+            timestampString = "549671880.412497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyMobiles/ViewModel/MobileDetailViewModel.swift"
-            timestampString = "549639607.2744581"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyMobiles/AddMobileViewController.swift"
-            timestampString = "549639607.274766"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "menuTapped(_:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "deleteObject(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

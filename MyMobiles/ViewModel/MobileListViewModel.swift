@@ -32,4 +32,9 @@ class MobileListViewModel {
         fetchData()
         return mobileDetailViewModels[index]
     }
+    
+    func deleteMobile(index: Int) {
+        DataService().deleteObject(with: mobileAt(index: index).name)
+        fetchData()
+    }
 }
