@@ -1,5 +1,5 @@
 //
-//  MobileViewModel.swift
+//  MobileDetailViewModel.swift
 //  MyMobiles
 //
 //  Created by Kashif Rizvi on 02/06/18.
@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-class MobileViewModel {
+class MobileDetailViewModel {
     
     var name: String
     var model: String
@@ -18,6 +19,8 @@ class MobileViewModel {
     var primaryCamera: String
     var secondaryCamera: String
     var memory: String
+    
+    var realm: Realm!
     
     init(mobile: Mobile) {
         self.name = mobile.name
@@ -39,5 +42,15 @@ class MobileViewModel {
         self.primaryCamera = primaryCamera
         self.secondaryCamera = secondaryCamera
         self.memory = memory
+        saveMobile()
     }
+    
+    private func saveMobile() {
+        realm = try! Realm()
+        try! realm.write {
+            realm.add(Mobile.init(mobileViewModel: self))
+            print("Write object with name: \(name)")
+        }
+    }
+    
 }

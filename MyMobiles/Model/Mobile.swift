@@ -7,18 +7,20 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Mobile {
-    var name: String
-    var model: String
-    var cost: Int
-    var color: String
-    var battery: Int
-    var primaryCamera: String
-    var secondaryCamera: String
-    var memory: String
+class Mobile: Object {
+    @objc dynamic var name: String = ""
+    @objc dynamic var model: String = ""
+    @objc dynamic var cost: Int = 0
+    @objc dynamic var color: String = ""
+    @objc dynamic var battery: Int = 0
+    @objc dynamic var primaryCamera: String = ""
+    @objc dynamic var secondaryCamera: String = ""
+    @objc dynamic var memory: String = ""
     
-    init(mobileViewModel: MobileViewModel) {
+    convenience init(mobileViewModel: MobileDetailViewModel) {
+        self.init()
         self.name = mobileViewModel.name
         self.cost = mobileViewModel.cost
         self.model = mobileViewModel.model
@@ -29,7 +31,8 @@ class Mobile {
         self.memory = mobileViewModel.memory
     }
     
-    init(name: String, model: String, cost: Int, color: String, battery: Int, primaryCamera: String, secondaryCamera: String, memory: String) {
+    convenience init(name: String, model: String, cost: Int, color: String, battery: Int, primaryCamera: String, secondaryCamera: String, memory: String) {
+        self.init()
         self.name = name
         self.cost = cost
         self.model = model

@@ -23,12 +23,18 @@ class AddMobileViewController: UIViewController {
     @IBOutlet weak var secondaryCameraTextField: UITextField!
     @IBOutlet weak var memoryLabel: UILabel!
     @IBOutlet weak var memoryTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
+    @IBAction func saveTapped(_ sender: UIButton) {
+        
+        _ = MobileDetailViewModel(name: nameTextField.text!, model: nameTextField.text!, cost: Int(costTextField.text!)!, color: colorTextField.text!, battery: Int(batteryTextField.text!)!, primaryCamera: primaryCameraTextfield.text!, secondaryCamera: secondaryCameraTextField.text!, memory: memoryTextField.text!)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
