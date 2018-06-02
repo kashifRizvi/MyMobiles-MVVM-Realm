@@ -20,7 +20,9 @@ class MobileDetailViewModel {
     var secondaryCamera: String
     var memory: String
     
-    var shouldShowOtherFeatures: Bool = false
+    var showOtherFeatures: Bool = false
+    
+    var delegate: DataServiceDelegate?
     
     var realm: Realm!
     
@@ -45,10 +47,6 @@ class MobileDetailViewModel {
         self.secondaryCamera = secondaryCamera
         self.memory = memory
         saveMobile()
-    }
-    
-    func shouldShowcaseOtherFeatures() -> Bool {
-        return shouldShowOtherFeatures
     }
     
     private func saveMobile() {

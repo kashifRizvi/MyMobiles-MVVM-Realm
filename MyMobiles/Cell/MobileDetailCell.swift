@@ -18,29 +18,17 @@ class MobileDetailCell: UITableViewCell {
     @IBOutlet weak var batteryLabel: UILabel!
     @IBOutlet weak var memoryLabel: UILabel!
     @IBOutlet weak var otherFeatureView: UIStackView!
-    private var otherFeatureShown: Bool = false {
+    var otherFeatureShown: Bool = false {
         didSet {
             otherFeatureView.isHidden = !otherFeatureShown
-            delegate.reloadCellFor(cell: self)
+            moreButton.setTitle(otherFeatureShown ? "less" : "more", for: .normal)
         }
     }
     var delegate: RowUpdateDelegate!
     @IBOutlet weak var moreButton: UIButton!
-    
+        
     @IBAction func moreButtonTapped(_ sender: UIButton) {
-        if otherFeatureShown {
-            moreButton.setTitle("more", for: .normal)
-        }
-        else {
-            moreButton.setTitle("less", for: .normal)
-        }
         otherFeatureShown = !otherFeatureShown
+        delegate.reloadCellFor(cell: self, showOtherFeatures: otherFeatureShown)
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        otherFeatureView.isHidden = true
-        moreButton.setTitle("more", for: .normal)
-    }
-
 }

@@ -27,4 +27,9 @@ class MobileListViewModel {
     func mobileAt(index: Int) -> MobileDetailViewModel {
         return mobileDetailViewModels[index]
     }
+    
+    func mobileUpdateAt(index: Int) -> MobileDetailViewModel {
+        fetchData()
+        return mobileDetailViewModels[index]
+    }
 }

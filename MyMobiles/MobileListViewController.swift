@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol RowUpdateDelegate {
-    func reloadCellFor(cell: UITableViewCell)
+    func reloadCellFor(cell: UITableViewCell, showOtherFeatures: Bool)
 }
 
-class MobileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RowUpdateDelegate {
+protocol DataServiceDelegate {
+    func dataDidChange()
+}
+
+class MobileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RowUpdateDelegate, DataServiceDelegate {
     
 
     private var mobileListViewModel: MobileListViewModel!
@@ -30,6 +35,7 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
             self.mobileListTableView.reloadData()
         }
         mobileListTableView.rowHeight = UITableViewAutomaticDimension
+        mobileListTableView.estimatedRowHeight = 200
         mobileListTableView.delegate = self
         mobileListTableView.dataSource = self
         
@@ -57,25 +63,28 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.primaryCameraLabel.text = mobileDetailViewModel.primaryCamera
         cell.secondaryCameraLabel.text = mobileDetailViewModel.secondaryCamera
         cell.delegate = self
+        cell.otherFeatureShown = mobileDetailViewModel.showOtherFeatures
         cell.tag = indexPath.row
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        print("Selected Row at index path, Section: \(indexPath.section) , Row: \(indexPath.row)")
-        tableView.reloadRows(at: [IndexPath(row: indexPath.row + 1, section: indexPath.section)], with: .automatic)
     }
     
     @IBAction func menuTapped(_ sender: UIButton) {
         menuView.shouldShow = !menuView.shouldShow
     }
     
-    func reloadCellFor(cell: UITableViewCell) {
+    func reloadCellFor(cell: UITableViewCell, showOtherFeatures: Bool) {
         if let indexPath = mobileListTableView.indexPath(for: cell) {
+            mobileListViewModel.mobileAt(index: indexPath.row).showOtherFeatures = showOtherFeatures
             mobileListTableView.reloadRows(at: [indexPath], with: .automatic)
         }
+    }
+    
+    func dataDidChange() {
+        mobileListTableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

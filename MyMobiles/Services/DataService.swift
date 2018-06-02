@@ -20,4 +20,8 @@ class DataService {
     func fetchMobiles() -> Results<Mobile> {
         return realm.objects(Mobile.self)
     }
+    
+    func writeObjects(completion: () -> ()) {
+        
+    }
 }
