@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuView" customModule="MyMobiles" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckl-H0-LEd">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="B0o-S0-SMX"/>
+                        <constraint firstAttribute="width" constant="150" id="Lf1-cn-gNL"/>
+                    </constraints>
+                    <state key="normal" title="Profile"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIb-HR-FdL">
+                    <rect key="frame" x="0.0" y="100" width="150" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="J15-5H-cZp"/>
+                        <constraint firstAttribute="width" constant="150" id="SM1-IP-VYZ"/>
+                    </constraints>
+                    <state key="normal" title="Settings"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3m-mt-KGT">
+                    <rect key="frame" x="0.0" y="200" width="150" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="QVa-MI-KS4"/>
+                        <constraint firstAttribute="width" constant="150" id="yoz-3c-Wd1"/>
+                    </constraints>
+                    <state key="normal" title="Orders"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ckl-H0-LEd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7ms-Zn-GL3"/>
+                <constraint firstItem="PIb-HR-FdL" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="HaI-iH-to7"/>
+                <constraint firstItem="G3m-mt-KGT" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ozh-0T-tdX"/>
+                <constraint firstItem="PIb-HR-FdL" firstAttribute="top" secondItem="ckl-H0-LEd" secondAttribute="bottom" id="Q9Y-Aa-89W"/>
+                <constraint firstItem="PIb-HR-FdL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QWO-Q9-RDi"/>
+                <constraint firstItem="ckl-H0-LEd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="VIH-Mh-qAb"/>
+                <constraint firstItem="G3m-mt-KGT" firstAttribute="top" secondItem="PIb-HR-FdL" secondAttribute="bottom" id="Zc5-BW-4Ui"/>
+                <constraint firstItem="ckl-H0-LEd" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cpy-kk-GlJ"/>
+                <constraint firstItem="G3m-mt-KGT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="u7x-fu-mWU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="G3m-mt-KGT" secondAttribute="bottom" id="wza-Qn-zXc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-231" y="-355"/>
+        </view>
+    </objects>
+</document>

@@ -12,7 +12,11 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
 
     private var mobileListViewModel: MobileListViewModel!
     
+    @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var mobileListTableView: UITableView!
+    
+    private var isMenuOpen: Bool = false
+    private var menuView: MenuView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,9 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         mobileListTableView.delegate = self
         mobileListTableView.dataSource = self
+        
+        menuView = MenuView()
+        view.addSubview(menuView)
     }
     
     
@@ -48,7 +55,11 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         return cell
     }
-
+    
+    @IBAction func menuTapped(_ sender: UIButton) {
+        menuView.toOpen = !menuView.toOpen
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

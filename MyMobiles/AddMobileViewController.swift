@@ -24,10 +24,15 @@ class AddMobileViewController: UIViewController {
     @IBOutlet weak var memoryLabel: UILabel!
     @IBOutlet weak var memoryTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var menuButton: UIButton!
+    
+    private var isMenuOpen: Bool = false
+    private var menuView: MenuView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        menuView = MenuView()
+        view.addSubview(menuView)
     }
 
     @IBAction func saveTapped(_ sender: UIButton) {
@@ -35,6 +40,12 @@ class AddMobileViewController: UIViewController {
         _ = MobileDetailViewModel(name: nameTextField.text!, model: nameTextField.text!, cost: Int(costTextField.text!)!, color: colorTextField.text!, battery: Int(batteryTextField.text!)!, primaryCamera: primaryCameraTextfield.text!, secondaryCamera: secondaryCameraTextField.text!, memory: memoryTextField.text!)
         
     }
+    
+    @IBAction func menuTapped(_ sender: UIButton) {
+        menuView.toOpen = !menuView.toOpen
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

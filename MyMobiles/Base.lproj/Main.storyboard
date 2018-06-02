@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Mobiles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MobileListViewController" customModule="MyMobiles" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,8 +19,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAT-p4-zSK">
+                                <rect key="frame" x="10" y="30" width="69" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rp-V2-xTM">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                        <state key="normal" title="Menu"/>
+                                        <connections>
+                                            <action selector="menuTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igt-ws-2Mi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5Rp-V2-xTM" firstAttribute="leading" secondItem="UAT-p4-zSK" secondAttribute="leading" id="Q6R-Zo-hhf"/>
+                                    <constraint firstItem="5Rp-V2-xTM" firstAttribute="top" secondItem="UAT-p4-zSK" secondAttribute="top" id="eXh-Xz-q3M"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Rp-V2-xTM" secondAttribute="bottom" id="fuZ-FB-deq"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Rp-V2-xTM" secondAttribute="trailing" constant="30" id="uv4-i1-Jjv"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rwr-NO-e2r">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mobileListCellId" rowHeight="488" id="Zda-q1-qUC" customClass="MobileDetailCell" customModule="MyMobiles" customModuleProvider="target">
@@ -263,21 +282,24 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UAT-p4-zSK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="6DS-Wk-nXO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rwr-NO-e2r" secondAttribute="trailing" id="DDD-wg-hcZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rwr-NO-e2r" secondAttribute="bottom" id="JWY-0K-oiV"/>
-                            <constraint firstItem="Rwr-NO-e2r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mos-P3-Y2K"/>
+                            <constraint firstItem="UAT-p4-zSK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="R9U-Hm-rOd"/>
                             <constraint firstItem="Rwr-NO-e2r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wgy-n1-0Ne"/>
+                            <constraint firstItem="Rwr-NO-e2r" firstAttribute="top" secondItem="UAT-p4-zSK" secondAttribute="bottom" constant="10" id="s5i-Rd-m4h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="QM9-yf-rAB"/>
+                    <tabBarItem key="tabBarItem" title="Mobiles" id="QM9-yf-rAB"/>
                     <connections>
+                        <outlet property="menuButton" destination="5Rp-V2-xTM" id="0uy-s1-iDx"/>
                         <outlet property="mobileListTableView" destination="Rwr-NO-e2r" id="Ase-GK-PYR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016.8" y="539.28035982008998"/>
+            <point key="canvasLocation" x="1017" y="550"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KOB-kS-0H4">
@@ -290,15 +312,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fbl-8I-TPq"/>
                         <segue destination="QeU-0R-KB1" kind="relationship" relationship="viewControllers" id="Pov-Ai-nUR"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="v8f-AA-SeF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSg-jX-cSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="181.59999999999999" y="189.3553223388306"/>
         </scene>
-        <!--Item-->
+        <!--Add Mobile-->
         <scene sceneID="Mzj-Sz-eZJ">
             <objects>
                 <viewController id="QeU-0R-KB1" customClass="AddMobileViewController" customModule="MyMobiles" customModuleProvider="target" sceneMemberID="viewController">
@@ -310,10 +332,29 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9t9-lE-oge">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="470"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="520"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTr-F7-9ta">
+                                                <rect key="frame" x="10" y="10" width="69" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIc-5D-U6J">
+                                                        <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                                        <state key="normal" title="Menu"/>
+                                                        <connections>
+                                                            <action selector="menuTapped:" destination="QeU-0R-KB1" eventType="touchUpInside" id="HmO-cs-Vdb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="AIc-5D-U6J" firstAttribute="leading" secondItem="xTr-F7-9ta" secondAttribute="leading" id="HqK-mK-PVU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AIc-5D-U6J" secondAttribute="bottom" id="Sd9-u8-9lJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AIc-5D-U6J" secondAttribute="trailing" constant="30" id="kGr-JK-pke"/>
+                                                    <constraint firstItem="AIc-5D-U6J" firstAttribute="top" secondItem="xTr-F7-9ta" secondAttribute="top" id="vu1-5W-gnS"/>
+                                                </constraints>
+                                            </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lgr-85-2lP">
-                                                <rect key="frame" x="15" y="0.0" width="345" height="470"/>
+                                                <rect key="frame" x="15" y="50" width="345" height="470"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDa-si-gE9">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
@@ -541,7 +582,9 @@
                                             <constraint firstAttribute="bottom" secondItem="lgr-85-2lP" secondAttribute="bottom" id="8NN-3N-79F"/>
                                             <constraint firstItem="lgr-85-2lP" firstAttribute="leading" secondItem="9t9-lE-oge" secondAttribute="leading" constant="15" id="IWi-Au-mBR"/>
                                             <constraint firstAttribute="trailing" secondItem="lgr-85-2lP" secondAttribute="trailing" constant="15" id="OpP-Qt-Iaz"/>
-                                            <constraint firstItem="lgr-85-2lP" firstAttribute="top" secondItem="9t9-lE-oge" secondAttribute="top" id="p5g-Y5-h7K"/>
+                                            <constraint firstItem="xTr-F7-9ta" firstAttribute="top" secondItem="9t9-lE-oge" secondAttribute="top" constant="10" id="RrH-Yh-SYG"/>
+                                            <constraint firstItem="xTr-F7-9ta" firstAttribute="leading" secondItem="9t9-lE-oge" secondAttribute="leading" constant="10" id="vkl-HJ-Pss"/>
+                                            <constraint firstItem="lgr-85-2lP" firstAttribute="top" secondItem="xTr-F7-9ta" secondAttribute="bottom" constant="10" id="yJX-8M-OXA"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -563,7 +606,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0qQ-p9-2yp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="r5t-wn-Fi7"/>
+                    <tabBarItem key="tabBarItem" title="Add Mobile" id="r5t-wn-Fi7"/>
                     <connections>
                         <outlet property="batteryLabel" destination="Jzd-vR-Sop" id="WSl-Q2-CwE"/>
                         <outlet property="batteryTextField" destination="RIh-HE-1bi" id="gyj-S2-1Dp"/>
@@ -573,6 +616,7 @@
                         <outlet property="costTextField" destination="vLK-3z-jF7" id="ao6-8f-grI"/>
                         <outlet property="memoryLabel" destination="8Gr-Vw-CUy" id="SsA-s1-agc"/>
                         <outlet property="memoryTextField" destination="8Y8-rW-VJV" id="yjE-Mg-3Eg"/>
+                        <outlet property="menuButton" destination="AIc-5D-U6J" id="gLN-Rt-Zab"/>
                         <outlet property="nameLabel" destination="SKR-Nl-ba6" id="xpg-0f-etZ"/>
                         <outlet property="nameTextField" destination="OvS-nL-kZA" id="nq6-Fh-Agc"/>
                         <outlet property="primaryCameraLabel" destination="20M-6Y-sHm" id="eJL-UM-yrW"/>

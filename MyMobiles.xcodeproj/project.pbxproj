@@ -10,6 +10,9 @@
 		48869ABE07F59C1803A26EFB /* Pods_MyMobilesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E5380D411441090D7665DA /* Pods_MyMobilesTests.framework */; };
 		4BB5612620C281DD00ED2B2E /* MobileDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612520C281DD00ED2B2E /* MobileDetailCell.swift */; };
 		4BB5612A20C2833D00ED2B2E /* MobileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612920C2833D00ED2B2E /* MobileListViewModel.swift */; };
+		4BB5612C20C2A6AC00ED2B2E /* MobileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612B20C2A6AC00ED2B2E /* MobileDetailViewModel.swift */; };
+		4BB5612E20C2ADC100ED2B2E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612D20C2ADC100ED2B2E /* MenuView.swift */; };
+		4BB5613020C2ADE900ED2B2E /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BB5612F20C2ADE900ED2B2E /* MenuView.xib */; };
 		4BDC434720C1A147001C9241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC434620C1A147001C9241 /* AppDelegate.swift */; };
 		4BDC434C20C1A147001C9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDC434A20C1A147001C9241 /* Main.storyboard */; };
 		4BDC434E20C1A148001C9241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDC434D20C1A148001C9241 /* Assets.xcassets */; };
@@ -19,7 +22,6 @@
 		4BDC437620C1A37F001C9241 /* AddMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */; };
 		4BDC437820C1A390001C9241 /* MobileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC437720C1A390001C9241 /* MobileListViewController.swift */; };
 		4BDC438A20C1CC1C001C9241 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC438920C1CC1C001C9241 /* Mobile.swift */; };
-		4BDC438F20C1CDF6001C9241 /* MobileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC438E20C1CDF6001C9241 /* MobileDetailViewModel.swift */; };
 		5E2C345503535EB9858E552B /* Pods_MyMobilesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B445EC229784DC6CF18E6920 /* Pods_MyMobilesUITests.framework */; };
 		BC9B602EF9C44BDAE26D76DA /* Pods_MyMobiles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D92F351C0B1311D7AA573C /* Pods_MyMobiles.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,9 @@
 		19D92F351C0B1311D7AA573C /* Pods_MyMobiles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMobiles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB5612520C281DD00ED2B2E /* MobileDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailCell.swift; sourceTree = "<group>"; };
 		4BB5612920C2833D00ED2B2E /* MobileListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewModel.swift; sourceTree = "<group>"; };
+		4BB5612B20C2A6AC00ED2B2E /* MobileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewModel.swift; sourceTree = "<group>"; };
+		4BB5612D20C2ADC100ED2B2E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		4BB5612F20C2ADE900ED2B2E /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		4BDC434320C1A147001C9241 /* MyMobiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMobiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDC434620C1A147001C9241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDC434B20C1A147001C9241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +66,6 @@
 		4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMobileViewController.swift; sourceTree = "<group>"; };
 		4BDC437720C1A390001C9241 /* MobileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewController.swift; sourceTree = "<group>"; };
 		4BDC438920C1CC1C001C9241 /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
-		4BDC438E20C1CDF6001C9241 /* MobileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewModel.swift; sourceTree = "<group>"; };
 		65E5380D411441090D7665DA /* Pods_MyMobilesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMobilesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD5BABF0ED0A74B5196D693 /* Pods-MyMobiles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMobiles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMobiles/Pods-MyMobiles.debug.xcconfig"; sourceTree = "<group>"; };
 		ACC0185303A3993FF765CFE9 /* Pods-MyMobiles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMobiles.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMobiles/Pods-MyMobiles.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				4BDC438820C1CC04001C9241 /* Model */,
 				4BDC438C20C1CDD0001C9241 /* ViewModel */,
 				4BDC434620C1A147001C9241 /* AppDelegate.swift */,
+				4BB5612D20C2ADC100ED2B2E /* MenuView.swift */,
+				4BB5612F20C2ADE900ED2B2E /* MenuView.xib */,
 				4BDC434A20C1A147001C9241 /* Main.storyboard */,
 				4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */,
 				4BDC437720C1A390001C9241 /* MobileListViewController.swift */,
@@ -183,8 +189,8 @@
 		4BDC438C20C1CDD0001C9241 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4BDC438E20C1CDF6001C9241 /* MobileDetailViewModel.swift */,
 				4BB5612920C2833D00ED2B2E /* MobileListViewModel.swift */,
+				4BB5612B20C2A6AC00ED2B2E /* MobileDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BDC435120C1A148001C9241 /* LaunchScreen.storyboard in Resources */,
+				4BB5613020C2ADE900ED2B2E /* MenuView.xib in Resources */,
 				4BDC434E20C1A148001C9241 /* Assets.xcassets in Resources */,
 				4BDC434C20C1A147001C9241 /* Main.storyboard in Resources */,
 			);
@@ -424,11 +431,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB5612C20C2A6AC00ED2B2E /* MobileDetailViewModel.swift in Sources */,
+				4BB5612E20C2ADC100ED2B2E /* MenuView.swift in Sources */,
 				4BB5612A20C2833D00ED2B2E /* MobileListViewModel.swift in Sources */,
 				4BB5612620C281DD00ED2B2E /* MobileDetailCell.swift in Sources */,
 				4BDC437620C1A37F001C9241 /* AddMobileViewController.swift in Sources */,
 				4BDC434720C1A147001C9241 /* AppDelegate.swift in Sources */,
-				4BDC438F20C1CDF6001C9241 /* MobileDetailViewModel.swift in Sources */,
 				4BDC437820C1A390001C9241 /* MobileListViewController.swift in Sources */,
 				4BDC438A20C1CC1C001C9241 /* Mobile.swift in Sources */,
 			);
