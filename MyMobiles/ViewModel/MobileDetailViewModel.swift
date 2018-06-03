@@ -21,9 +21,7 @@ class MobileDetailViewModel {
     var memory: String
     
     var showOtherFeatures: Bool = false
-    
-    var delegate: DataServiceDelegate?
-        
+            
     init(mobile: Mobile) {
         self.name = mobile.name
         self.cost = mobile.cost
@@ -48,7 +46,7 @@ class MobileDetailViewModel {
     }
     
     private func saveMobile() {
-        DataService().saveMobile(object: Mobile.init(mobileViewModel: self))
+        DataService.sharedInstance.saveMobile(object: Mobile.init(mobileViewModel: self))
     }
     
 }

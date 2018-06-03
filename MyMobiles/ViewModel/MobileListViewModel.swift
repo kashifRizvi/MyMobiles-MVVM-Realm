@@ -9,19 +9,27 @@
 import Foundation
 import RealmSwift
 
-class MobileListViewModel {
+protocol DataServiceDelegate {
+    func dataDidChange()
+}
+
+class MobileListViewModel: DataServiceDelegate {
     
     private (set) var mobileDetailViewModels :[MobileDetailViewModel] = [MobileDetailViewModel]()
+    private var completion: (() -> ())?
+    private var dataService = DataService.sharedInstance
     
     init(completion :@escaping () -> ()) {
-            fetchData()
-            DispatchQueue.main.async {
-                completion()
-            }
-        }
+        self.completion = completion
+        dataService.delegate = self
+        fetchData()
+    }
     
     private func fetchData() {
-        mobileDetailViewModels = DataService().fetchMobiles().map(MobileDetailViewModel.init)
+        mobileDetailViewModels = DataService.sharedInstance.fetchMobiles().map(MobileDetailViewModel.init)
+        DispatchQueue.main.async {
+            self.completion?()
+        }
     }
     
     func mobileAt(index: Int) -> MobileDetailViewModel {
@@ -34,7 +42,10 @@ class MobileListViewModel {
     }
     
     func deleteMobile(index: Int) {
-        DataService().deleteObject(with: mobileAt(index: index).name)
+        DataService.sharedInstance.deleteObject(with: mobileAt(index: index).name)
+    }
+    
+    func dataDidChange() {
         fetchData()
     }
 }

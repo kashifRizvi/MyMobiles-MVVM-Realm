@@ -13,8 +13,12 @@ class DataService {
     
     private var realm: Realm!
     
-    init() {
+    var delegate: DataServiceDelegate?
+    static var sharedInstance: DataService = DataService()
+    
+    private init() {
         realm = try! Realm()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
     func fetchMobiles() -> Results<Mobile> {
@@ -24,12 +28,15 @@ class DataService {
     func saveMobile(object: Mobile) {
         try! realm.write {
             realm.add(object)
+            print("Added object with name = \(object.name)")
+            delegate?.dataDidChange()
         }
     }
     
     func deleteObject(with name: String) {
         try! realm.write {
             realm.delete(realm.objects(Mobile.self).filter("name == %@", name))
+            delegate?.dataDidChange()
         }
     }
 }

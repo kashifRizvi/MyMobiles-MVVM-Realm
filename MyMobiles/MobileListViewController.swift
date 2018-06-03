@@ -13,11 +13,7 @@ protocol RowUpdateDelegate {
     func reloadCellFor(cell: UITableViewCell, showOtherFeatures: Bool)
 }
 
-protocol DataServiceDelegate {
-    func dataDidChange()
-}
-
-class MobileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RowUpdateDelegate, DataServiceDelegate {
+class MobileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RowUpdateDelegate {
     
 
     private var mobileListViewModel: MobileListViewModel!
@@ -84,10 +80,6 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
             mobileListViewModel.mobileAt(index: indexPath.row).showOtherFeatures = showOtherFeatures
             mobileListTableView.reloadRows(at: [indexPath], with: .automatic)
         }
-    }
-    
-    func dataDidChange() {
-        mobileListTableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
