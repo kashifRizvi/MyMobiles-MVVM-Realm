@@ -18,7 +18,6 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
 
     private var mobileListViewModel: MobileListViewModel!
     
-    @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var mobileListTableView: UITableView!
     
     private var isMenuOpen: Bool = false
@@ -30,15 +29,11 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
         mobileListViewModel = MobileListViewModel() {
             self.mobileListTableView.reloadData()
         }
-        mobileListTableView.rowHeight = UITableViewAutomaticDimension
-        mobileListTableView.estimatedRowHeight = 200
-        mobileListTableView.delegate = self
-        mobileListTableView.dataSource = self
-        
         menuView = MenuView()
         view.addSubview(menuView)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(menuTapped(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTapped(_:)))
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if mobileListViewModel != nil {
@@ -50,28 +45,41 @@ class MobileListViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mobileListCellId", for: indexPath) as! MobileDetailCell
         let mobileDetailViewModel = mobileListViewModel.mobileAt(index: indexPath.row)
-        
-        cell.batteryLabel.text = String(mobileDetailViewModel.battery)
+        cell.delegate = self
+        cell.batteryLabel.text = mobileDetailViewModel.battery
         cell.colorLabel.text = mobileDetailViewModel.color
-        cell.costLabel.text = String(mobileDetailViewModel.cost)
+        cell.costLabel.text = mobileDetailViewModel.cost
         cell.memoryLabel.text = mobileDetailViewModel.memory
-        cell.nameModelLabel.text = String("\(mobileDetailViewModel.name), \(mobileDetailViewModel.model)")
+        cell.nameModelLabel.text = mobileDetailViewModel.name
         cell.primaryCameraLabel.text = mobileDetailViewModel.primaryCamera
         cell.secondaryCameraLabel.text = mobileDetailViewModel.secondaryCamera
-        cell.delegate = self
         cell.otherFeatureShown = mobileDetailViewModel.showOtherFeatures
-        cell.tag = indexPath.row
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             mobileListViewModel.deleteMobile(index: indexPath.row)
-            tableView.reloadData()
         }
     }
     
-    @IBAction func menuTapped(_ sender: UIButton) {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let item = mobileListViewModel.mobileAt(index: sourceIndexPath.row)
+        mobileListViewModel.mobileDetailViewModels.remove(at: sourceIndexPath.row)
+        mobileListViewModel.mobileDetailViewModels.insert(item, at: destinationIndexPath.row)
+        
+    }
+    
+    @objc func editTapped(_ sender: UIBarButtonItem) {
+        mobileListTableView.isEditing = !mobileListTableView.isEditing
+        mobileListTableView.isEditing ? (sender.title = "Done") : (sender.title = "Edit")
+    }
+    
+    @objc func menuTapped(_ sender: UIButton) {
         menuView.shouldShow = !menuView.shouldShow
     }
     

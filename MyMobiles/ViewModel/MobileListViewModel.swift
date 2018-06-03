@@ -15,11 +15,11 @@ protocol DataServiceDelegate {
 
 class MobileListViewModel: DataServiceDelegate {
     
-    private (set) var mobileDetailViewModels :[MobileDetailViewModel] = [MobileDetailViewModel]()
+    var mobileDetailViewModels :[MobileDetailViewModel] = [MobileDetailViewModel]()
     private var completion: (() -> ())?
     private var dataService = DataService.sharedInstance
     
-    init(completion :@escaping () -> ()) {
+    init(completion : (() -> ())? = nil) {
         self.completion = completion
         dataService.delegate = self
         fetchData()
@@ -33,11 +33,6 @@ class MobileListViewModel: DataServiceDelegate {
     }
     
     func mobileAt(index: Int) -> MobileDetailViewModel {
-        return mobileDetailViewModels[index]
-    }
-    
-    func mobileUpdateAt(index: Int) -> MobileDetailViewModel {
-        fetchData()
         return mobileDetailViewModels[index]
     }
     

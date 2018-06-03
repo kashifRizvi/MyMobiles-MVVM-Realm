@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		48869ABE07F59C1803A26EFB /* Pods_MyMobilesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E5380D411441090D7665DA /* Pods_MyMobilesTests.framework */; };
+		4B92C34320C3FDB400D61A36 /* MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C34220C3FDB400D61A36 /* MobileTests.swift */; };
+		4B92C35320C405DE00D61A36 /* MobileDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C35220C405DE00D61A36 /* MobileDetailViewModelTests.swift */; };
+		4B92C35620C4092800D61A36 /* MockMobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C35520C4092800D61A36 /* MockMobile.swift */; };
+		4B92C35720C4096500D61A36 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC438920C1CC1C001C9241 /* Mobile.swift */; };
+		4B92C35820C4096800D61A36 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5614120C2D16300ED2B2E /* DataService.swift */; };
+		4B92C35920C4096A00D61A36 /* MobileDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612520C281DD00ED2B2E /* MobileDetailCell.swift */; };
+		4B92C35A20C4096C00D61A36 /* MobileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612920C2833D00ED2B2E /* MobileListViewModel.swift */; };
+		4B92C35B20C4096E00D61A36 /* MobileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612B20C2A6AC00ED2B2E /* MobileDetailViewModel.swift */; };
+		4B92C35C20C4097000D61A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC434620C1A147001C9241 /* AppDelegate.swift */; };
+		4B92C35D20C4097200D61A36 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612D20C2ADC100ED2B2E /* MenuView.swift */; };
+		4B92C35E20C4097600D61A36 /* AddMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */; };
+		4B92C35F20C4097800D61A36 /* MobileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC437720C1A390001C9241 /* MobileListViewController.swift */; };
+		4B92C36320C40E4C00D61A36 /* MobileListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C36220C40E4C00D61A36 /* MobileListViewModelTests.swift */; };
+		4B92C36520C4214B00D61A36 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C36420C4214B00D61A36 /* BindingTextField.swift */; };
+		4B92C36620C421B400D61A36 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C36420C4214B00D61A36 /* BindingTextField.swift */; };
 		4BB5612620C281DD00ED2B2E /* MobileDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612520C281DD00ED2B2E /* MobileDetailCell.swift */; };
 		4BB5612A20C2833D00ED2B2E /* MobileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612920C2833D00ED2B2E /* MobileListViewModel.swift */; };
 		4BB5612C20C2A6AC00ED2B2E /* MobileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5612B20C2A6AC00ED2B2E /* MobileDetailViewModel.swift */; };
@@ -47,6 +62,11 @@
 /* Begin PBXFileReference section */
 		08007C2713D64CA01E1A8006 /* Pods-MyMobilesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMobilesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMobilesTests/Pods-MyMobilesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		19D92F351C0B1311D7AA573C /* Pods_MyMobiles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMobiles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B92C34220C3FDB400D61A36 /* MobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileTests.swift; sourceTree = "<group>"; };
+		4B92C35220C405DE00D61A36 /* MobileDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewModelTests.swift; sourceTree = "<group>"; };
+		4B92C35520C4092800D61A36 /* MockMobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMobile.swift; sourceTree = "<group>"; };
+		4B92C36220C40E4C00D61A36 /* MobileListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewModelTests.swift; sourceTree = "<group>"; };
+		4B92C36420C4214B00D61A36 /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		4BB5612520C281DD00ED2B2E /* MobileDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailCell.swift; sourceTree = "<group>"; };
 		4BB5612920C2833D00ED2B2E /* MobileListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewModel.swift; sourceTree = "<group>"; };
 		4BB5612B20C2A6AC00ED2B2E /* MobileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewModel.swift; sourceTree = "<group>"; };
@@ -105,6 +125,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B92C35420C4090300D61A36 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				4B92C35520C4092800D61A36 /* MockMobile.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		4B92C36020C40A8A00D61A36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B92C34220C3FDB400D61A36 /* MobileTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B92C36120C40A9E00D61A36 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B92C35220C405DE00D61A36 /* MobileDetailViewModelTests.swift */,
+				4B92C36220C40E4C00D61A36 /* MobileListViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B92C37620C42F5900D61A36 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				4BB5612D20C2ADC100ED2B2E /* MenuView.swift */,
+				4BB5612F20C2ADE900ED2B2E /* MenuView.xib */,
+			);
+			path = MenuView;
+			sourceTree = "<group>";
+		};
+		4B92C37720C42F7400D61A36 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */,
+				4BDC437720C1A390001C9241 /* MobileListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		4BB5612420C281AA00ED2B2E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,14 +211,13 @@
 			children = (
 				4BB5614020C2D13F00ED2B2E /* Services */,
 				4BB5612420C281AA00ED2B2E /* Cell */,
+				4B92C37620C42F5900D61A36 /* MenuView */,
 				4BDC438820C1CC04001C9241 /* Model */,
 				4BDC438C20C1CDD0001C9241 /* ViewModel */,
+				4B92C37720C42F7400D61A36 /* ViewControllers */,
 				4BDC434620C1A147001C9241 /* AppDelegate.swift */,
-				4BB5612D20C2ADC100ED2B2E /* MenuView.swift */,
-				4BB5612F20C2ADE900ED2B2E /* MenuView.xib */,
 				4BDC434A20C1A147001C9241 /* Main.storyboard */,
-				4BDC437520C1A37F001C9241 /* AddMobileViewController.swift */,
-				4BDC437720C1A390001C9241 /* MobileListViewController.swift */,
+				4B92C36420C4214B00D61A36 /* BindingTextField.swift */,
 				4BDC437420C1A178001C9241 /* External */,
 			);
 			path = MyMobiles;
@@ -164,6 +226,9 @@
 		4BDC435A20C1A148001C9241 /* MyMobilesTests */ = {
 			isa = PBXGroup;
 			children = (
+				4B92C36120C40A9E00D61A36 /* ViewModel */,
+				4B92C36020C40A8A00D61A36 /* Model */,
+				4B92C35420C4090300D61A36 /* Mock */,
 				4BDC435B20C1A148001C9241 /* MyMobilesTests.swift */,
 				4BDC435D20C1A148001C9241 /* Info.plist */,
 			);
@@ -447,6 +512,7 @@
 				4BB5612E20C2ADC100ED2B2E /* MenuView.swift in Sources */,
 				4BB5612A20C2833D00ED2B2E /* MobileListViewModel.swift in Sources */,
 				4BB5612620C281DD00ED2B2E /* MobileDetailCell.swift in Sources */,
+				4B92C36520C4214B00D61A36 /* BindingTextField.swift in Sources */,
 				4BDC437620C1A37F001C9241 /* AddMobileViewController.swift in Sources */,
 				4BDC434720C1A147001C9241 /* AppDelegate.swift in Sources */,
 				4BDC437820C1A390001C9241 /* MobileListViewController.swift in Sources */,
@@ -458,7 +524,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B92C35E20C4097600D61A36 /* AddMobileViewController.swift in Sources */,
+				4B92C35720C4096500D61A36 /* Mobile.swift in Sources */,
+				4B92C36320C40E4C00D61A36 /* MobileListViewModelTests.swift in Sources */,
 				4BDC435C20C1A148001C9241 /* MyMobilesTests.swift in Sources */,
+				4B92C35F20C4097800D61A36 /* MobileListViewController.swift in Sources */,
+				4B92C35620C4092800D61A36 /* MockMobile.swift in Sources */,
+				4B92C35820C4096800D61A36 /* DataService.swift in Sources */,
+				4B92C36620C421B400D61A36 /* BindingTextField.swift in Sources */,
+				4B92C35B20C4096E00D61A36 /* MobileDetailViewModel.swift in Sources */,
+				4B92C35A20C4096C00D61A36 /* MobileListViewModel.swift in Sources */,
+				4B92C35320C405DE00D61A36 /* MobileDetailViewModelTests.swift in Sources */,
+				4B92C35D20C4097200D61A36 /* MenuView.swift in Sources */,
+				4B92C34320C3FDB400D61A36 /* MobileTests.swift in Sources */,
+				4B92C35C20C4097000D61A36 /* AppDelegate.swift in Sources */,
+				4B92C35920C4096A00D61A36 /* MobileDetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

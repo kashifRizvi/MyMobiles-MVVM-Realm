@@ -11,10 +11,9 @@ import RealmSwift
 
 class Mobile: Object {
     @objc dynamic var name: String = ""
-    @objc dynamic var model: String = ""
-    @objc dynamic var cost: Int = 0
+    @objc dynamic var cost: String = ""
     @objc dynamic var color: String = ""
-    @objc dynamic var battery: Int = 0
+    @objc dynamic var battery: String = ""
     @objc dynamic var primaryCamera: String = ""
     @objc dynamic var secondaryCamera: String = ""
     @objc dynamic var memory: String = ""
@@ -24,7 +23,6 @@ class Mobile: Object {
         self.init()
         self.name = mobileViewModel.name
         self.cost = mobileViewModel.cost
-        self.model = mobileViewModel.model
         self.color = mobileViewModel.color
         self.battery = mobileViewModel.battery
         self.primaryCamera = mobileViewModel.primaryCamera
@@ -32,11 +30,10 @@ class Mobile: Object {
         self.memory = mobileViewModel.memory
     }
     
-    convenience init(name: String, model: String, cost: Int, color: String, battery: Int, primaryCamera: String, secondaryCamera: String, memory: String) {
+    convenience init(name: String, cost: String, color: String, battery: String, primaryCamera: String, secondaryCamera: String, memory: String) {
         self.init()
         self.name = name
         self.cost = cost
-        self.model = model
         self.color = color
         self.battery = battery
         self.primaryCamera = primaryCamera
